@@ -1,8 +1,8 @@
 # SERVIDOR DEDICADO MINECRAFT BEDROCK NO ANDROID
 
-### ASUS ROG Phone 5s – Guia Completo (Local + Online)
+### Guia Completo (Local + Online)
 
-Este tutorial ensina como transformar um smartphone Android potente em um **Servidor Dedicado oficial do Minecraft Bedrock**, rodando via Termux + Ubuntu + Box64. O método foi testado com **horas de uptime estável**, executando a versão **1.21.124** do Bedrock Server.
+Este tutorial ensina como transformar um smartphone Android potente em um **Servidor Dedicado oficial do Minecraft Bedrock**, rodando via Termux + Ubuntu + Box64. O método foi testado com **horas de uptime estável**, executando a versão **1.21.124** do Bedrock Server. No caso usei o celular ASUS ROG Phone 5s, mas pode ser qualquer outro celular que tenha uma potência boa.
 
 
 
