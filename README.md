@@ -6,8 +6,6 @@
 
 Guia para rodar o servidor oficial do Minecraft Bedrock em dispositivos Android usando Termux + Ubuntu + Box64.
 
-
-
 ## REQUISITOS
 
 **Hardware Mínimo:**
@@ -25,8 +23,6 @@ Guia para rodar o servidor oficial do Minecraft Bedrock em dispositivos Android 
 
 **Verificar seu hardware:** Instale "CPU-Z" ou "DevCheck" para confirmar processador e RAM.
 
-
-
 ## ÍNDICE
 
 1. [Servidor Local (LAN)](#1-servidor-local-lan)
@@ -37,11 +33,9 @@ Guia para rodar o servidor oficial do Minecraft Bedrock em dispositivos Android 
 6. [Troubleshooting](#6-troubleshooting)
 7. [FAQ](#7-faq)
 
+## 1. SERVIDOR LOCAL (LAN)
 
-
-# 1. SERVIDOR LOCAL (LAN)
-
-## 1.1 Instalar Termux
+### 1.1 Instalar Termux
 
 **F-Droid (recomendado):**
 1. Acesse https://f-droid.org/
@@ -51,7 +45,7 @@ Guia para rodar o servidor oficial do Minecraft Bedrock em dispositivos Android 
 **Play Store (alternativa):**
 - Pode apresentar problemas, mas funciona
 
-## 1.2 Configuração Inicial
+### 1.2 Configuração Inicial
 
 Abra o Termux e execute os comandos abaixo. Basta copiar e colar cada linha.
 
@@ -61,7 +55,7 @@ pkg update && pkg upgrade
 
 Quando perguntado `Do you want to continue? [Y/n]`, digite `Y` e pressione Enter.
 
-## 1.3 Instalar proot-distro e Ubuntu
+### 1.3 Instalar proot-distro e Ubuntu
 
 ```bash
 pkg install proot-distro
@@ -79,7 +73,7 @@ proot-distro login ubuntu
 
 Você verá `root@localhost:~#` quando estiver dentro do Ubuntu.
 
-## 1.4 Instalar Box64
+### 1.4 Instalar Box64
 
 Execute cada comando:
 
@@ -99,7 +93,7 @@ wget -qO- https://ryanfortner.github.io/box64-debs/KEY.gpg | gpg --dearmor -o /e
 apt update && apt install box64 -y
 ```
 
-## 1.5 Baixar Servidor Bedrock
+### 1.5 Baixar Servidor Bedrock
 
 **No navegador do celular:**
 1. Acesse: https://www.minecraft.net/pt-br/download/server/bedrock
@@ -148,7 +142,7 @@ unzip -o servidor.zip
 chmod +x bedrock_server
 ```
 
-## 1.6 Script de Inicialização
+### 1.6 Script de Inicialização
 
 Crie um script que reinicia automaticamente em caso de crash:
 
@@ -172,7 +166,7 @@ EOF
 chmod +x iniciar.sh
 ```
 
-## 1.7 Iniciar Servidor
+### 1.7 Iniciar Servidor
 
 ```bash
 ./iniciar.sh
@@ -180,7 +174,7 @@ chmod +x iniciar.sh
 
 Aguarde até ver `Server started.` nos logs.
 
-## 1.8 Conectar (LAN)
+### 1.8 Conectar (LAN)
 
 **Descobrir IP do celular:**
 1. Configurações → Wi-Fi → Toque na rede conectada
@@ -191,11 +185,9 @@ Aguarde até ver `Server started.` nos logs.
 2. Endereço: IP do celular (ex: `192.168.1.105`)
 3. Porta: `19132`
 
+## 2. SERVIDOR ONLINE (PLAYIT)
 
-
-# 2. SERVIDOR ONLINE (PLAYIT)
-
-## 2.1 Entendendo Sessões do Termux
+### 2.1 Entendendo Sessões do Termux
 
 Para o servidor funcionar online, você precisa rodar **duas coisas simultaneamente**:
 - Sessão 1: Servidor Minecraft
@@ -208,14 +200,14 @@ Para o servidor funcionar online, você precisa rodar **duas coisas simultaneame
 **Alternar entre sessões:**
 - Arraste novamente e selecione a sessão desejada
 
-## 2.2 Criar Conta Playit
+### 2.2 Criar Conta Playit
 
 1. Acesse https://playit.gg
 2. Crie uma conta (Sign Up)
 3. Confirme o email
 4. Faça login
 
-## 2.3 Instalar Playit Agent
+### 2.3 Instalar Playit Agent
 
 **Em uma nova sessão do Termux:**
 
@@ -234,14 +226,14 @@ https://playit.gg/claim/ABC123XYZ456
 
 Copie e abra esse link no navegador.
 
-## 2.4 Vincular Agente
+### 2.4 Vincular Agente
 
 1. Cole o link no navegador
 2. A página detectará automaticamente o agente
 3. Clique em "Claim Agent"
 4. O terminal mostrará "Linked Successfully"
 
-## 2.5 Criar Túnel
+### 2.5 Criar Túnel
 
 No site do Playit:
 1. Vá em **Tunnels**
@@ -256,15 +248,13 @@ O Playit gerará um endereço único (ex: `exemplo-123.gl.joinmc.link`)
 
 **Importante:** Copie esse endereço. É o que você passará para outros jogadores.
 
-## 2.6 Rodar Servidor + Playit Juntos
+### 2.6 Rodar Servidor + Playit Juntos
 
 Neste ponto, você deve ter:
 - **Sessão 1:** Servidor Minecraft rodando (desde a Parte 1)
 - **Sessão 2:** Playit já rodando (desde a seção 2.3 quando você vinculou)
 
 **Se ambos já estão rodando, você não precisa fazer nada!** O servidor já está online e acessível pelo endereço do Playit.
-
-
 
 ### Se precisar reiniciar algo:
 
@@ -283,8 +273,6 @@ Neste ponto, você deve ter:
 - Inicie o servidor em uma sessão
 - Inicie o Playit em outra sessão
 
-
-
 ### ✅ Verificação:
 
 Alterne entre as sessões (arraste da esquerda):
@@ -293,18 +281,16 @@ Alterne entre as sessões (arraste da esquerda):
 
 **Ambas precisam estar ativas para o servidor funcionar online.**
 
-## 2.7 Conectar
+### 2.7 Conectar
 
 No Minecraft Bedrock:
 1. Adicionar Servidor
 2. Endereço: Cole o endereço do Playit
 3. Porta: 19132 (ou deixe em branco)
 
+## 3. CONFIGURAÇÃO
 
-
-# 3. CONFIGURAÇÃO
-
-## 3.1 server.properties
+### 3.1 server.properties
 
 Para o servidor (parado):
 
@@ -334,7 +320,7 @@ white-list=false
 
 Salvar: `CTRL+X` → `Y` → `Enter`
 
-## 3.2 Whitelist
+### 3.2 Whitelist
 
 Para restringir acesso:
 
@@ -352,7 +338,7 @@ nano whitelist.json
 ]
 ```
 
-## 3.3 Permissões OP
+### 3.3 Permissões OP
 
 No console do servidor (rodando):
 ```
@@ -369,11 +355,9 @@ Ou edite `permissions.json`:
 ]
 ```
 
+## 4. BACKUPS
 
-
-# 4. BACKUPS
-
-## 4.1 Backup Manual
+### 4.1 Backup Manual
 
 Pare o servidor (`CTRL+C`) e execute:
 
@@ -382,13 +366,13 @@ cd ~/servidor_minecraft
 tar -czf /sdcard/Download/backup_mundo_$(date +%Y%m%d_%H%M%S).tar.gz worlds/
 ```
 
-## 4.2 Backup Rápido (sem compactar)
+### 4.2 Backup Rápido (sem compactar)
 
 ```bash
 cp -r worlds/ /sdcard/Download/backup_minecraft_$(date +%Y%m%d)/
 ```
 
-## 4.3 Restaurar Backup
+### 4.3 Restaurar Backup
 
 ```bash
 cd ~/servidor_minecraft
@@ -404,11 +388,9 @@ cp -r /sdcard/Download/backup_minecraft_DATA/ worlds/
 
 **Recomendação:** Faça backup antes de atualizar ou instalar addons.
 
+## 5. MONITORAMENTO
 
-
-# 5. MONITORAMENTO
-
-## 5.1 Temperatura
+### 5.1 Temperatura
 
 **Por marca:**
 - **Xiaomi/Poco:** Segurança → Bateria
@@ -422,7 +404,7 @@ cp -r /sdcard/Download/backup_minecraft_DATA/ worlds/
 - 50-60°C: Monitore, melhore ventilação
 - 60°C+: Pare o servidor
 
-## 5.2 Recursos (CPU/RAM)
+### 5.2 Recursos (CPU/RAM)
 
 Em nova sessão do Termux:
 
@@ -433,7 +415,7 @@ htop
 
 Procure pelo processo `box64`. Pressione `Q` para sair.
 
-## 5.3 Logs
+### 5.3 Logs
 
 Os logs aparecem em tempo real na sessão onde o servidor roda.
 
@@ -443,11 +425,9 @@ Para salvar em arquivo:
 ./iniciar.sh 2>&1 | tee server.log
 ```
 
+## 6. TROUBLESHOOTING
 
-
-# 6. TROUBLESHOOTING
-
-## 6.1 Servidor não inicia
+### 6.1 Servidor não inicia
 
 **Porta em uso:**
 ```bash
@@ -465,7 +445,7 @@ apt update && apt install box64 -y
 **Memória insuficiente:**
 Feche outros apps no Android.
 
-## 6.2 Lag
+### 6.2 Lag
 
 **Soluções:**
 - Reduza `view-distance` para 6-8
@@ -474,7 +454,7 @@ Feche outros apps no Android.
 - Feche outros apps
 - Ative modo performance no Android
 
-## 6.3 Playit desconecta
+### 6.3 Playit desconecta
 
 **Desative economia de bateria para Termux:**
 
@@ -498,11 +478,11 @@ wget https://github.com/playit-cloud/playit-agent/releases/latest/download/playi
 chmod +x playit-linux-aarch64
 ```
 
-## 6.4 Termux fecha sozinho
+### 6.4 Termux fecha sozinho
 
 Mesmo procedimento de desativar economia de bateria acima.
 
-## 6.5 Conexão falha
+### 6.5 Conexão falha
 
 **Checklist servidor local:**
 - Servidor rodando?
@@ -517,15 +497,13 @@ Mesmo procedimento de desativar economia de bateria acima.
 - Endereço correto?
 - Whitelist desativada ou jogador adicionado?
 
-## 6.6 Mundo corrompido
+### 6.6 Mundo corrompido
 
 Restaure o último backup (veja seção 4.3).
 
 Se não houver backup, o mundo está perdido.
 
-
-
-# 7. FAQ
+## 7. FAQ
 
 ## Funciona em qualquer Android?
 
@@ -593,8 +571,6 @@ Não. Apenas Android.
 
 Priorize: Snapdragon 800+, 8GB+ RAM, boa refrigeração.
 
-
-
 ## OTIMIZAÇÃO TÉRMICA
 
 ### Geral
@@ -630,8 +606,6 @@ Priorize: Snapdragon 800+, 8GB+ RAM, boa refrigeração.
 - Suporte com ventilação
 - Dissipador de cobre/alumínio (~R$15-30)
 
-
-
 ## RESUMO TÉCNICO
 
 **Stack:**
@@ -654,8 +628,6 @@ Priorize: Snapdragon 800+, 8GB+ RAM, boa refrigeração.
 - Aquecimento pode ser limitante
 - Playit gratuito tem limites de túneis
 
-
-
 ## CRÉDITOS
 
 **Testado em:** ASUS ROG Phone 5s  
@@ -664,7 +636,5 @@ Priorize: Snapdragon 800+, 8GB+ RAM, boa refrigeração.
 **Playit:** https://playit.gg  
 
 Minecraft® é marca registrada da Mojang AB/Microsoft Corporation.
-
-
 
 **Última atualização:** Fevereiro 2026
