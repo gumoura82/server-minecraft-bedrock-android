@@ -253,8 +253,6 @@ Deixe essa sessão rodando. **NÃO FECHE!**
 
 Deixe essa sessão rodando também. **NÃO FECHE!**
 
----
-
 ### ✅ Checklist - Servidor Online Funcionando:
 
 - [ ] Sessão 1 mostrando logs do servidor Minecraft
@@ -263,8 +261,6 @@ Deixe essa sessão rodando também. **NÃO FECHE!**
 - [ ] Você tem o endereço do túnel (ex: `seu-endereco.gl.joinmc.link`)
 
 Se todos os itens estão marcados, seu servidor está **ONLINE**! 🎉
-
----
 
 ### Como conectar no servidor:
 
@@ -282,8 +278,6 @@ Se todos os itens estão marcados, seu servidor está **ONLINE**! 🎉
 Simplesmente copie e cole o endereço completo que o Playit gerou pra você.
 
 💡 **Dica:** O endereço do Playit é único e permanente enquanto o túnel existir. Anote ele ou tire print para não perder!
-
----
 
 ## 3. CONFIGURAÇÃO DO SERVIDOR
 
@@ -370,8 +364,6 @@ Ou use o comando no console do servidor:
 op NomeDoJogador
 ```
 
----
-
 ## 4. MANUTENÇÃO E BACKUPS
 
 ### 4.1 Fazendo Backup do Mundo
@@ -415,8 +407,6 @@ unzip -o ~/server_novo.zip
 5. **NÃO sobrescreva**: `server.properties`, `whitelist.json`, `permissions.json`, pasta `worlds/`
 6. Reinicie o servidor
 
----
-
 ## 5. MONITORAMENTO E LOGS
 
 ### 5.1 Visualizando Logs
@@ -455,8 +445,6 @@ Procure pelo processo `box64` para ver uso de CPU e RAM.
 - ✅ 35-45°C: Excelente
 - ⚠️ 45-55°C: Normal sob carga (monitore)
 - ❌ 55°C+: Reduza carga ou melhore refrigeração
-
----
 
 ## 6. OTIMIZAÇÃO E GERENCIAMENTO TÉRMICO
 
@@ -509,8 +497,6 @@ Procure pelo processo `box64` para ver uso de CPU e RAM.
 3. **Dissipador passivo:** Placas de cobre/alumínio (~R$15-30)
 4. **Ambiente:** Mantenha em local com ar-condicionado se possível
 5. **Posição:** Deixe na horizontal para melhor dissipação
-
----
 
 ## 7. TROUBLESHOOTING
 
@@ -606,8 +592,6 @@ Configurações → Aplicativos → Termux → Bateria
 # OnePlus: Battery → Battery optimization → Termux → Don't optimize
 ```
 
----
-
 ## 8. FAQ
 
 ### Posso usar outro celular além do ROG Phone?
@@ -671,8 +655,6 @@ Depende do seu celular:
 
 Sempre teste e monitore temperatura e performance.
 
----
-
 ## 9. COMPATIBILIDADE E LIMITAÇÕES
 
 ### Processadores testados:
@@ -719,8 +701,6 @@ Sempre teste e monitore temperatura e performance.
 - ⚠️ Playit gratuito tem limite de ~1 túnel ativo
 - ⚠️ Performance cai significativamente abaixo de 50% de bateria (se não plugado)
 
----
-
 ## 10. CONTRIBUIÇÕES DA COMUNIDADE
 
 ### Testou em outro dispositivo?
@@ -738,8 +718,6 @@ Abra uma issue ou pull request reportando:
 
 **Sua contribuição ajuda a comunidade a saber quais dispositivos funcionam melhor!**
 
----
-
 ## 11. RESUMO
 
 Este tutorial cobre:
@@ -755,8 +733,6 @@ Este tutorial cobre:
 - ✔ Compatibilidade de chipsets e dispositivos
 - ✔ FAQ com dúvidas frequentes
 
----
-
 ## 📞 Suporte
 
 Se tiver dúvidas ou problemas, verifique:
@@ -765,8 +741,6 @@ Se tiver dúvidas ou problemas, verifique:
 - Ambas as sessões estão rodando (servidor + Playit)
 - Porta 19132 está configurada corretamente no túnel
 - Seção de [Troubleshooting](#7-troubleshooting) para problemas comuns
-
----
 
 ## 🎯 Dicas Finais
 
@@ -786,8 +760,6 @@ Se tiver dúvidas ou problemas, verifique:
 | 10-15 | 12GB | ⚠️ Lag leve em áreas densas | Monitore temperatura |
 | 15+ | 12GB+ | ⚠️ Otimização necessária | Reduza view-distance |
 
----
-
 ## 🌟 Créditos
 
 **Desenvolvido e testado com:**
@@ -802,13 +774,9 @@ Se tiver dúvidas ou problemas, verifique:
 - [Playit.gg](https://playit.gg/) - Túnel de rede gratuito
 - [Minecraft Bedrock Server](https://www.minecraft.net/en-us/download/server/bedrock) - Servidor oficial da Mojang
 
----
-
 ## 📝 Licença
 
 Este é um guia educacional. Minecraft® é marca registrada da Mojang AB/Microsoft Corporation.
-
----
 
 ## 🔄 Atualizações do Guia
 
@@ -821,8 +789,6 @@ Este é um guia educacional. Minecraft® é marca registrada da Mojang AB/Micros
 - [ ] Integração com Discord bot
 - [ ] Suporte a texturas customizadas
 
----
-
 ## ⭐ Gostou?
 
 Se este guia te ajudou, considere:
@@ -830,7 +796,5 @@ Se este guia te ajudou, considere:
 - 🔄 Compartilhar com amigos
 - 💬 Reportar seu teste de dispositivo
 - 🐛 Reportar bugs ou melhorias
-
----
 
 **Transforme seu celular em um servidor dedicado Minecraft! 🎮📱**
